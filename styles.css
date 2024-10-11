@@ -183,6 +183,7 @@ footer p {
 .contacto-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .contacto-titulo h1 {
@@ -196,7 +197,7 @@ footer p {
 }
 
 .form-contacto {
-    max-width: 400px;
+    max-width: 450px;
     min-height: 700px;
     background: rgb(37, 113, 255);
     /* background: rgb(255, 242, 0); */
@@ -298,8 +299,9 @@ footer p {
 }
 
 .table {
-    width: 500px;
-    margin: 20px 0;
+    /* width: 100%; */
+    max-width: 420px;
+    margin: 15px 0;
 }
 
 .table th {
@@ -312,12 +314,12 @@ footer p {
 .table th,
 .table td {
     text-align: left;
-    border: 1.5px solid rgb(25, 94, 255);
-    /* padding: 5px; */
+    border: 1.25px solid rgb(25, 94, 255);
     padding: 5px;
 }
 
 .table td {
+    width: 1000px;
     font-size: 20px;
 }
 
