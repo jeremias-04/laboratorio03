@@ -23,8 +23,10 @@
     </header>
 
     <main class="contacto">
+        <div class="contacto-titulo container">
+            <h1>Contacto</h1>
+        </div>
         <div class="contacto-content container">
-            <h1>Contacto:</h1>
             <div class="form-contacto">
                 <fieldset class="form-fieldset">
                     <legend class="form-legend">Formulario</legend>
@@ -43,6 +45,18 @@
 
                     <label class="form-label" for="edad">Edad:</label>
                     <input class="form-input" type="number" min="16" max="120">
+
+                    <label class="form-label" for="direccion">Dirección:</label>
+                    <textarea class="form-textarea" name="direccion" id="direccion"></textarea>
+
+                    <label class="form-label" for="provincia">Provincia:</label>
+                    <select class="form-select" name="provincia" id="provincia">
+                        <option value="Rio Negro">Rio Negro</option>
+                        <option value="Rio Negro">Neuquen</option>
+                        <option value="Rio Negro">Chubut</option>
+                        <option value="Rio Negro">Santa Cruz</option>
+                        <option value="Rio Negro">Tierra del Fuego</option>
+                    </select>
 
                     <label class="form-label" for="codigo-postal">Codigo Postal:</label>
                     <input class="form-input" type="text" placeholder="Ej: A1234ABC">
@@ -82,11 +96,60 @@
 
                 <input class="form-submit-btn" type="submit" value="Enviar">
             </div>
-            <!-- <p>¡Hola! Soy Jeremías Colqui, y este año comencé a estudiar esta carrera. Me encanta la programación y
-                siempre
-                busco aprender algo nuevo, ya sea en tecnología o cualquier otro tema que me interese. Estoy motivado,
-                con ganas de seguir aprendiendo y conocer cosas nuevas.
-            </p> -->
+
+            <section>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Campo</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td id="resultadoNombre"></td>
+                        </tr>
+                        <tr>
+                            <td>Apellido</td>
+                            <td id="resultadoApellido"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td id="resultadoEmail"></td>
+                        </tr>
+                        <tr>
+                            <td>Telefono</td>
+                            <td id="resultadoTelefono"></td>
+                        </tr>
+                        <tr>
+                            <td>Edad</td>
+                            <td id="resultadoEdad"></td>
+                        </tr>
+                        <tr>
+                            <td>Dirección</td>
+                            <td id="resultadoDireccion"></td>
+                        </tr>
+                        <tr>
+                            <td>Provincia</td>
+                            <td id="resultadoProvincia"></td>
+                        </tr>
+                        <tr>
+                            <td>Codigo Postal</td>
+                            <td id="resultadoCodigoPostal"></td>
+                        </tr>
+                        <tr>
+                            <td>Metodo de Contacto</td>
+                            <td id="resultadoMetodoContacto"></td>
+                        </tr>
+                        <tr>
+                            <td>Subscripción</td>
+                            <td id="resultadoSubscripcion"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
         </div>
     </main>
 

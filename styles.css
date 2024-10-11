@@ -67,7 +67,8 @@ ul li {
 
 .main {
     /*background: rgb(0, 104, 190);*/
-    background: rgb(224, 224, 224);
+    /* background: rgb(224, 224, 224); */
+    background: white;
 }
 
 .main-content {
@@ -136,7 +137,8 @@ footer p {
 .main-info {
     display: flex;
     /*background: rgb(0, 112, 129);*/
-    background: rgb(224, 224, 224);
+    /* background: rgb(224, 224, 224); */
+    background: white;
 }
 
 .main-info-content {
@@ -173,23 +175,34 @@ footer p {
 /*Contacto*/
 
 .contacto {
-    margin: 20px 0;
+    /* background: rgb(42, 134, 255); */
+    /* margin: 20px 0; */
+    padding: 20px 0;
 }
 
-.contacto-content h1 {
+.contacto-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacto-titulo h1 {
     display: inline-block;
     font-size: 50px;
     padding: 5px 0;
     margin: 0;
     font-family: Impact;
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 .form-contacto {
     max-width: 400px;
     min-height: 700px;
     background: rgb(37, 113, 255);
+    /* background: rgb(255, 242, 0); */
+    /* background: rgb(27, 27, 27); */
     border-radius: 10px;
+    border: 3px solid white;
     padding: 10px;
     /*margin: 20px 0;*/
     /*margin-bottom: 20px;*/
@@ -214,16 +227,42 @@ footer p {
 }
 
 .form-input {
-    font-size: 20px;
+    font-size: 18px;
     color: black;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     border: 2px solid white;
     outline: none;
 }
 
 .form-input:focus {
-    border: 2px solid rgb(0, 183, 255) !important;
+    border: 2px solid rgb(0, 183, 255);
+    outline: none;
+}
+
+.form-textarea {
+    min-height: 80px;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+    border: 2px solid white;
+    border-radius: 5px;
+    resize: none;
+}
+
+.form-textarea:focus {
+    border: 2px solid rgb(0, 183, 255);
+    outline: none;
+}
+
+.form-select {
+    border: 2px solid white;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.form-select:focus {
+    border: 2px solid rgb(0, 183, 255);
     outline: none;
 }
 
@@ -256,6 +295,30 @@ footer p {
     background: red !important;
     border: 2px solid red;
     padding: 50px;
+}
+
+.table {
+    width: 500px;
+    margin: 20px 0;
+}
+
+.table th {
+    font-size: 25px;
+    font-weight: 600;
+    background: rgb(37, 113, 255);
+    color: white;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    border: 1.5px solid rgb(25, 94, 255);
+    /* padding: 5px; */
+    padding: 5px;
+}
+
+.table td {
+    font-size: 20px;
 }
 
 /*.form-submit-btn:hover {
