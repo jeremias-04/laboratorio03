@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content container">
+            <h1 id="header-name">Jeremias Colqui</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca-de.html">Acerca de</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contacto">
+        <div class="contacto-content container">
+            <h1>Contacto:</h1>
+            <div class="form-contacto">
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Formulario</legend>
+
+                    <label class="form-label" for="nombre">Nombre:</label>
+                    <input class="form-input" type="text" required>
+
+                    <label class="form-label" for="apellido">Apellido:</label>
+                    <input class="form-input" type="text">
+
+                    <label class="form-label" for="correo">Correo:</label>
+                    <input class="form-input" type="email" required>
+
+                    <label class="form-label" for="correo">Telefono:</label>
+                    <input class="form-input" placeholder="Ej: 2920123456" type="number" required>
+
+                    <label class="form-label" for="edad">Edad:</label>
+                    <input class="form-input" type="number" min="16" max="120">
+
+                    <label class="form-label" for="codigo-postal">Codigo Postal:</label>
+                    <input class="form-input" type="text" placeholder="Ej: A1234ABC">
+
+                    <div>
+                        <legend class="form-legend">Metodo Preferido de Contacto:</legend>
+                        <input class="form-input" type="radio" name="correo-electronico" checked>
+                        <label class="form-label" for="correo-electronico">Correo Electronico</label>
+
+                        <input class="form-input" type="radio" name="correo-electronico">
+                        <label class="form-label" for="correo-electronico">Correo Postal</label>
+
+                        <input class="form-input" type="radio" name="correo-electronico">
+                        <label class="form-label" for="correo-electronico">Telefono</label>
+                    </div>
+
+                    <div>
+                        <legend class="form-legend">Tipo de Subscripcion:</legend>
+
+                        <input class="form-checkbox" type="checkbox">
+                        <label class="form-label" for="noticias">Noticias</label>
+
+                        <input class="form-checkbox" type="checkbox">
+                        <label class="form-label" for="promociones">Promociones</label>
+
+                        <input class="form-checkbox" type="checkbox" checked>
+                        <label class="form-label" for="alertas">Alertas</label>
+
+                        <input class="form-checkbox" type="checkbox">
+                        <label class="form-label" for="eventos">Eventos</label>
+                    </div>
+
+                    <div>
+                        <input class="cargar-btn" placeholder="Cargar" type="button" name="cargar" value="Cargar">
+                    </div>
+                </fieldset>
+
+                <input class="form-submit-btn" type="submit" value="Enviar">
+            </div>
+            <!-- <p>¡Hola! Soy Jeremías Colqui, y este año comencé a estudiar esta carrera. Me encanta la programación y
+                siempre
+                busco aprender algo nuevo, ya sea en tecnología o cualquier otro tema que me interese. Estoy motivado,
+                con ganas de seguir aprendiendo y conocer cosas nuevas.
+            </p> -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Jeremias Colqui - Año 2024</p>
+        <p>©Universidad Nacional del Comahue 2024</p>
+        <p>Monseñor Esandi y Ayacucho (8500) Viedma - Río Negro</p>
+    </footer>
+
+</body>
+
+</html>

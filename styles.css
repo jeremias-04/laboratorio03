@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+    padding: 5px 0;
+    z-index: 10000;
+}
+
+.header-content {
+    display: flex;
+    /*background-color: rgb(0, 0, 0);*/
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#header-name {
+    font-size: 30px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+.header h1,
+.header ul li a {
+    color: white;
+    transition: 0.2;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.header ul li a:hover {
+    opacity: 90%;
+}
+
+
+
+/*Main*/
+
+.main {
+    /*background: rgb(0, 104, 190);*/
+    background: rgb(224, 224, 224);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px;
+    justify-content: center;
+    gap: 2rem;
+    /*transform: translateY(40px);*/
+}
+
+.main-content h2 {
+    /*color: white;*/
+    color: rgb(24, 24, 24);
+}
+
+.main-titulo {
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.main-parrafo {
+    font-size: 22.5px;
+    font-weight: 300;
+}
+
+.info-btn {
+    display: inline-block;
+    max-width: 100px;
+    font-size: 20px;
+    padding: 20px;
+    border: 1.5px solid rgb(24, 24, 24);
+    border-radius: 5px;
+    color: black;
+    transition: 0.25s ease-in-out;
+    font-weight: 300;
+    /*text-transform: uppercase;*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.info-btn:hover {
+    /*background: white;*/
+    background: rgb(24, 24, 24);
+    /*color: black;*/
+    color: white;
+}
+
+/*Footer*/
+
+footer {
+    padding: 15px;
+    background: rgb(5, 5, 5);
+    text-align: center;
+}
+
+footer p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 200;
+}
+
+/*Acerca de*/
+
+.main-info {
+    display: flex;
+    /*background: rgb(0, 112, 129);*/
+    background: rgb(224, 224, 224);
+}
+
+.main-info-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    gap: 2rem;
+    /*transform: translateY(-50px);*/
+}
+
+.main-info h2 {
+    font-size: 50px;
+    /*color: rgb(234, 234, 234);*/
+    color: black;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-family: Impact;
+}
+
+.main-info p {
+    /*color: rgba(255, 255, 255, 0.85);*/
+    color: black;
+    font-size: 22.5px;
+    font-weight: 300;
+}
+
+.foto {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 81, 255);
+}
+
+/*Contacto*/
+
+.contacto {
+    margin: 20px 0;
+}
+
+.contacto-content h1 {
+    display: inline-block;
+    font-size: 50px;
+    padding: 5px 0;
+    margin: 0;
+    font-family: Impact;
+    font-weight: 300;
+}
+
+.form-contacto {
+    max-width: 400px;
+    min-height: 700px;
+    background: rgb(37, 113, 255);
+    border-radius: 10px;
+    padding: 10px;
+    /*margin: 20px 0;*/
+    /*margin-bottom: 20px;*/
+}
+
+.form-fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 7px;
+}
+
+.form-legend {
+    font-size: 25px;
+    color: white;
+    padding: 10px 0px;
+}
+
+.form-label {
+    font-size: 20px;
+    color: white;
+}
+
+.form-input {
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+    outline: none;
+}
+
+.form-input:focus {
+    border: 2px solid rgb(0, 183, 255) !important;
+    outline: none;
+}
+
+.cargar-btn {
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 10px;
+    color: black;
+}
+
+.form-submit-btn {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    color: black;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-checkbox {
+    background: red;
+    border: 2px solid red;
+    padding: 50px;
+}
+
+.form-checkbox:checked {
+    background: red !important;
+    border: 2px solid red;
+    padding: 50px;
+}
+
+/*.form-submit-btn:hover {
+    color: white;
+    background: rgb(14, 14, 14);
+}*/
