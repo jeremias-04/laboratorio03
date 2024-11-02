@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,7 +13,6 @@ a {
 }
 
 ul li {
-  text-decoration: none;
   color: white;
   list-style: none;
 }
@@ -28,16 +28,17 @@ fieldset {
 
 .header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: rgb(27, 27, 27);
   padding: 5px 0;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .header-content {
   display: flex;
-  /*background-color: rgb(0, 0, 0);*/
   justify-content: space-between;
-  text-align: center;
   align-items: center;
   padding: 10px 0;
 }
@@ -56,7 +57,6 @@ fieldset {
 .header h1,
 .header ul li a {
   color: white;
-  transition: 0.2;
   font-size: 20px;
   font-weight: 200;
 }
@@ -65,32 +65,75 @@ fieldset {
   opacity: 90%;
 }
 
-/*Main*/
-
 .main {
-  /*background: rgb(0, 104, 190);*/
-  /* background: rgb(224, 224, 224); */
   background: white;
+  padding-top: 80px;
 }
 
 .main-content {
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   min-height: 100vh;
   padding: 10px;
   justify-content: center;
-  gap: 2rem;
-  /*transform: translateY(40px);*/
 }
 
-.main-content h2 {
-  /*color: white;*/
-  color: rgb(24, 24, 24);
+@media (max-width: 480px) {
+  .main-content-2 {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+}
+
+.main-content-2 {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-curza {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: rgb(12, 26, 148);
+  border-radius: 50%;
+  padding: 10px;
+  animation: girarLogo 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes girarLogo {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .main-titulo {
   font-size: 65px;
   font-weight: bold;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.main-titulo img {
+  margin-left: 15px;
+  width: 50px;
+  animation: logo-spin 2s linear infinite;
+}
+
+@keyframes logo-spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .main-parrafo {
@@ -100,7 +143,7 @@ fieldset {
 
 .info-btn {
   display: inline-block;
-  max-width: 100px;
+  max-width: 150px;
   font-size: 20px;
   padding: 20px;
   border: 1.5px solid rgb(24, 24, 24);
@@ -108,19 +151,13 @@ fieldset {
   color: black;
   transition: 0.25s ease-in-out;
   font-weight: 300;
-  /*text-transform: uppercase;*/
-  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 .info-btn:hover {
-  /*background: white;*/
   background: rgb(24, 24, 24);
-  /*color: black;*/
   color: white;
 }
-
-/*Footer*/
 
 footer {
   padding: 15px;
@@ -134,12 +171,7 @@ footer p {
   font-weight: 200;
 }
 
-/*Acerca de*/
-
 .main-info {
-  display: flex;
-  /*background: rgb(0, 112, 129);*/
-  /* background: rgb(224, 224, 224); */
   background: white;
 }
 
@@ -149,12 +181,10 @@ footer p {
   min-height: 100vh;
   justify-content: center;
   gap: 2rem;
-  /*transform: translateY(-50px);*/
 }
 
 .main-info h2 {
   font-size: 50px;
-  /*color: rgb(234, 234, 234);*/
   color: black;
   text-transform: uppercase;
   font-weight: 200;
@@ -162,10 +192,21 @@ footer p {
 }
 
 .main-info p {
-  /*color: rgba(255, 255, 255, 0.85);*/
   color: black;
   font-size: 22.5px;
   font-weight: 300;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-top: 10px;
+  position: sticky;
+  top: 0;
+}
+
+.acerca-de {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .foto {
@@ -174,12 +215,8 @@ footer p {
   border: 5px solid rgb(0, 81, 255);
 }
 
-/*Contacto*/
-
 .contacto {
-  /* background: rgb(42, 134, 255); */
-  /* margin: 20px 0; */
-  padding: 20px 0;
+  padding: 100px 0;
 }
 
 .contacto-content {
@@ -189,10 +226,8 @@ footer p {
 }
 
 .contacto-titulo h1 {
-  display: inline-block;
   font-size: 50px;
   padding: 5px 0;
-  margin: 0;
   font-family: Impact;
   font-weight: 300;
   text-transform: uppercase;
@@ -200,36 +235,27 @@ footer p {
 
 .form-contacto {
   max-width: 450px;
-  min-height: 700px;
   background: rgb(37, 113, 255);
-  /* background: rgb(255, 242, 0); */
-  /* background: rgb(27, 27, 27); */
   border-radius: 10px;
   border: 3px solid white;
   padding: 10px;
-  /*margin: 20px 0;*/
-  /*margin-bottom: 20px;*/
 }
 
 .form-fieldset {
   display: flex;
   flex-direction: column;
-  border: none;
   gap: 7px;
 }
 
-.form-legend {
-  font-size: 25px;
-  color: white;
-  padding: 10px 0px;
-}
-
+.form-legend,
 .form-label {
   font-size: 20px;
   color: white;
+  font-family: "Roboto" !important;
 }
 
-.form-input {
+.form-input,
+.form-textarea {
   font-size: 18px;
   color: black;
   padding: 10px;
@@ -238,47 +264,9 @@ footer p {
   outline: none;
 }
 
-.form-input:focus {
-  border: 2px solid rgb(0, 183, 255);
-  outline: none;
-}
-
-.form-textarea {
-  min-height: 80px;
-  font-size: 18px;
-  padding: 10px;
-  margin: 0;
-  border: 2px solid white;
-  border-radius: 5px;
-  resize: none;
-}
-
+.form-input:focus,
 .form-textarea:focus {
   border: 2px solid rgb(0, 183, 255);
-  outline: none;
-}
-
-.form-datalist {
-  border: 2px solid white;
-  font-size: 15px;
-  padding: 10px;
-}
-
-.form-datalist:focus {
-  border: 2px solid rgb(0, 183, 255);
-  outline: none;
-}
-
-.form-datalist option {
-  font-size: 15px;
-  padding: 20px;
-}
-
-.cargar-btn {
-  display: inline-block;
-  font-size: 20px;
-  padding: 5px 10px;
-  color: black;
 }
 
 .form-submit-btn {
@@ -289,26 +277,13 @@ footer p {
   margin-top: 10px;
   transition: 0.3s ease-in-out;
   border-radius: 5px;
-  border: none;
   cursor: pointer;
 }
 
-.form-checkbox {
-  background: red;
-  border: 2px solid red;
-  padding: 50px;
-}
-
-.form-checkbox:checked {
-  background: red !important;
-  border: 2px solid red;
-  padding: 50px;
-}
-
 .table {
-  /* width: 100%; */
   max-width: 420px;
   margin: 15px 0;
+  border-collapse: collapse;
 }
 
 .table th {
@@ -316,6 +291,7 @@ footer p {
   font-weight: 600;
   background: rgb(37, 113, 255);
   color: white;
+  text-align: left;
 }
 
 .table th,
@@ -326,11 +302,22 @@ footer p {
 }
 
 .table td {
-  width: 1000px;
   font-size: 20px;
 }
 
-/*.form-submit-btn:hover {
-    color: white;
-    background: rgb(14, 14, 14);
-}*/
+.scroll-arriba {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #064cb6;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  display: none;
+  z-index: 100;
+}
