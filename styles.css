@@ -321,3 +321,32 @@ footer p {
   display: none;
   z-index: 100;
 }
+
+.cv-container {
+  margin-bottom: 100px;
+}
+
+.cv-content {
+}
+
+.cv-content h2 {
+  font-size: 30px;
+}
+#cv-descripcion {
+  font-size: 25px;
+}
+#cv-info {
+  display: none;
+  margin-top: 10px;
+  font-size: 20px;
+}
+#leerMasBtn {
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  background: rgb(0, 98, 235);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
