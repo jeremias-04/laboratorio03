@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio</title>
+    <title>Juego - Adivinanza de Números</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
-
   <body>
     <header class="header">
       <div class="header-content container">
@@ -26,25 +25,25 @@
       </div>
     </header>
 
-    <main class="main">
-      <div class="main-content container">
-        <h2 class="main-titulo">Titulo Principal</h2>
-        <div class="main-content-2">
-          <h2 class="main-parrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, facere
-            sint, dignissimos beatae et necessitatibus aliquam deserunt alias
-            laudantium illo ratione ullam placeat laboriosam perferendis iure
-            tempora fugiat eveniet quos.
-          </h2>
-          <div>
-            <img src="img/logo_curza.png" alt="Logo CURZA" class="logo-curza" />
-          </div>
-        </div>
-        <a class="info-btn" href="acerca-de.html">Acerca de</a>
+    <main class="juego-contenedor">
+      <div class="juego container">
+        <h1>Juego de Adivina el Número</h1>
+        <p>
+          Adivina un número entre 1 y 100. Tienes 10 intentos. ¡Buena suerte!
+        </p>
+        <input
+          type="number"
+          id="entradaNumero"
+          placeholder="Ingresa tu número"
+          min="1"
+          max="100"
+        />
+        <button id="comprobarBtn">Comprobar</button>
+        <p id="mensajeResultado"></p>
+        <p id="intentosRestantes">Intentos restantes: 10</p>
+        <button id="reiniciarBtn" style="display: none">Reiniciar</button>
       </div>
     </main>
-
-    <a class="scroll-arriba" href="#">⬆</a>
 
     <footer>
       <p>Jeremias Colqui - Año 2024</p>
@@ -52,6 +51,6 @@
       <p>Monseñor Esandi y Ayacucho (8500) Viedma - Río Negro</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="juego.js"></script>
   </body>
 </html>

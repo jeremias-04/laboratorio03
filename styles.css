@@ -350,3 +350,40 @@ footer p {
   color: white;
   cursor: pointer;
 }
+
+.juego-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.juego h1 {
+  font-size: 38px;
+}
+
+.juego input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.juego button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.juego button:hover {
+  background-color: #0056b3;
+}
+
+#mensajeResultado {
+  font-weight: bold;
+}
